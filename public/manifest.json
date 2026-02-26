@@ -1,0 +1,15 @@
+{
+  "short_name": "Raven",
+  "name": "Raven Market",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "125x125"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#000000"
+}
