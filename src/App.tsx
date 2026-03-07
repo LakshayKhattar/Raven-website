@@ -7,11 +7,11 @@ import "./App.css";
 const FALLBACK_IMAGE = "/thumbnail.png";
 const VIDEO_URL = "/bg_vid.mp4";
 
-export const DOCS_URL = "https://docs.raven.market/quickstart";
-export const APP_URL = "https://dev.raven.market/";
+export const DOCS_URL = "https://docs.raven.market/";
+export const APP_URL = "https://test.raven.market/";
 export const TWITTER_URL = "https://x.com/Raven_market_";
 export const TELEGRAM_URL = "https://t.me/RavenMarkets";
-export const GITHUB_URL = "https://github.com/alpendprotocol";
+export const GITHUB_URL = "https://github.com/RiveraMoney";
 
 export function Layout({ children, ccPrice, nextSettleDate }: { children: React.ReactNode, ccPrice: string, nextSettleDate: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
