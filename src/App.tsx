@@ -58,7 +58,6 @@ export function Layout({ children, ccPrice, nextSettleDate }: { children: React.
           <div className="nav-right">
             <ul className="nav-links">
               <li><a href={DOCS_URL} target="_blank" rel="noreferrer">DOCS</a></li>
-              <li><span style={{ opacity: 0.4, cursor: 'not-allowed', color: '#ccc', fontFamily: 'Barlow Condensed', fontWeight: 600, fontSize: 'clamp(9px, 0.85vw, 12px)', letterSpacing: '0.18em', textTransform: 'uppercase' }}>ABOUT US</span></li>
             </ul>
             <a href={APP_URL} target="_blank" rel="noreferrer" className="nav-cta">LAUNCH APP</a>
           </div>
@@ -106,7 +105,6 @@ export function Layout({ children, ccPrice, nextSettleDate }: { children: React.
               <a href={APP_URL} target="_blank" rel="noreferrer" className="nav-cta">LAUNCH APP</a>
             </div>
             <div className="mobile-menu-content">
-              <span style={{ opacity: 0.4, cursor: 'not-allowed', color: 'white', fontFamily: 'IBM Plex Mono', fontSize: '20px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.05em' }}>ABOUT US</span>
               <a href={DOCS_URL} target="_blank" rel="noreferrer">DOCS</a>
               <a href={TWITTER_URL} target="_blank" rel="noreferrer">TWITTER</a>
               <a href={TELEGRAM_URL} target="_blank" rel="noreferrer">TELEGRAM</a>
@@ -130,11 +128,11 @@ function LandingPage() {
         <span className="gold">Raven Settles.</span>
       </h1>
       <p className="hero-sub">
-        DECENTRALIZED DIGITAL OPTIONS TRADING ON CANTON
+        DECENTRALIZED <span>DIGITAL OPTIONS</span> TRADING ON CANTON
       </p>
       <button className="trade-btn" onClick={() => window.open(APP_URL, '_blank')}>TRADE NOW</button>
       <p className="testnet-label">
-        <span>CANTON NETWORK · TESTNET V0.1</span>
+        <span>CANTON NETWORK · TESTNET <span className="version">V0.1</span></span>
       </p>
     </div>
   );
@@ -189,7 +187,7 @@ export default function App() {
     const darkMatcher = window.matchMedia("(prefers-color-scheme: dark)");
 
     const updateFavicon = (isDark: boolean) => {
-      const href = isDark ? "/Raven_dark.png" : "/Raven_light.png";
+      const href = isDark ? "/Raven_light.png" : "/Raven_dark.png";
       if (favicon) favicon.setAttribute("href", href);
       if (appleIcon) appleIcon.setAttribute("href", href);
     };

@@ -123,7 +123,7 @@ nav {
 }
 
 .logo-img {
-  height: clamp(28px, 3.2vw, 40px);
+  height: clamp(24px, 2.8vw, 34px);
   width: auto;
 }
 
@@ -187,7 +187,7 @@ nav {
 .hero h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(40px, 6vw, 84px);
+  font-size: clamp(36px, 5.5vw, 76px);
   line-height: 1.0;
   color: #fff;
   /* text-transform: uppercase; */
@@ -203,15 +203,14 @@ nav {
 .hero-sub {
   margin-top: clamp(12px, 2vh, 24px);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(9px, 0.9vw, 13px);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
 }
 
-.hero-sub strong {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 600;
+.hero-sub span {
+  color: #fff;
 }
 
 .trade-btn {
@@ -223,7 +222,7 @@ nav {
   cursor: pointer;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-size: clamp(12px, 1.05vw, 15px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   width: clamp(180px, 18vw, 240px);
@@ -251,12 +250,12 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: clamp(9px, 0.8vw, 12px);
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.35);
   text-transform: uppercase;
 }
 
-.testnet-label span {
-  opacity: 0.7;
+.testnet-label .version {
+  font-size: 0.85em;
 }
 
 /* FOOTER */
