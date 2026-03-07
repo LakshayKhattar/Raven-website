@@ -58,7 +58,7 @@ export function Layout({ children, ccPrice, nextSettleDate }: { children: React.
           <div className="nav-right">
             <ul className="nav-links">
               <li><a href={DOCS_URL} target="_blank" rel="noreferrer">DOCS</a></li>
-              <li><span style={{ opacity: 0.4, cursor: 'not-allowed', color: '#ccc', fontFamily: 'Barlow Condensed', fontWeight: 600, fontSize: 'clamp(10px, 1vw, 14px)', letterSpacing: '0.18em', textTransform: 'uppercase' }}>ABOUT US</span></li>
+              <li><span style={{ opacity: 0.4, cursor: 'not-allowed', color: '#ccc', fontFamily: 'Barlow Condensed', fontWeight: 600, fontSize: 'clamp(9px, 0.85vw, 12px)', letterSpacing: '0.18em', textTransform: 'uppercase' }}>ABOUT US</span></li>
             </ul>
             <a href={APP_URL} target="_blank" rel="noreferrer" className="nav-cta">LAUNCH APP</a>
           </div>

@@ -145,7 +145,7 @@ nav {
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(9px, 0.85vw, 12px);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: color 0.2s;
@@ -160,7 +160,7 @@ nav {
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(9px, 0.85vw, 12px);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   display: flex;
@@ -170,7 +170,7 @@ nav {
 
 .nav-cta::after {
   content: '→';
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(9px, 0.85vw, 12px);
 }
 
 /* HERO */
@@ -187,7 +187,7 @@ nav {
 .hero h1 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: clamp(32px, 4.5vw, 56px);
+  font-size: clamp(40px, 6vw, 84px);
   line-height: 1.0;
   color: #fff;
   /* text-transform: uppercase; */
@@ -317,9 +317,9 @@ footer {
 
 .legal-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
