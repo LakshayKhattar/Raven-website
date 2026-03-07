@@ -9,7 +9,7 @@ const VIDEO_URL = "/bg_vid.mp4";
 
 export const DOCS_URL = "https://docs.raven.market/";
 export const APP_URL = "https://test.raven.market/";
-export const TWITTER_URL = "https://x.com/Raven_market_";
+export const TWITTER_URL = "https://x.com/RavenMarkets";
 export const TELEGRAM_URL = "https://t.me/RavenMarkets";
 export const GITHUB_URL = "https://github.com/RiveraMoney";
 
@@ -52,7 +52,7 @@ export function Layout({ children, ccPrice, nextSettleDate }: { children: React.
           </div>
 
           <Link to="/" className="nav-logo">
-            <img src="/Raven_logo.svg" alt="Raven Logo" className="logo-img" />
+            <img src="/Raven_logo.png" alt="Raven Logo" className="logo-img" />
           </Link>
 
           <div className="nav-right">
@@ -102,7 +102,7 @@ export function Layout({ children, ccPrice, nextSettleDate }: { children: React.
           <div className="mobile-menu-overlay">
             <div className="mobile-menu-header">
               <button className="close-menu" onClick={() => setMenuOpen(false)}>×</button>
-              <img src="/Raven_logo.svg" alt="Raven Logo" className="logo-img" />
+              <img src="/Raven_logo.png" alt="Raven Logo" className="logo-img" />
               <a href={APP_URL} target="_blank" rel="noreferrer" className="nav-cta">LAUNCH APP</a>
             </div>
             <div className="mobile-menu-content">
@@ -133,8 +133,8 @@ function LandingPage() {
         DECENTRALIZED DIGITAL OPTIONS TRADING ON CANTON
       </p>
       <button className="trade-btn" onClick={() => window.open(APP_URL, '_blank')}>TRADE NOW</button>
-      <p className="devnet-label">
-        <span>CANTON NETWORK · DEVNET V0.1</span>
+      <p className="testnet-label">
+        <span>CANTON NETWORK · TESTNET V0.1</span>
       </p>
     </div>
   );
@@ -181,6 +181,25 @@ export default function App() {
     calculateSettleDate();
     const interval = setInterval(calculateSettleDate, 60000);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const favicon = document.querySelector('link[rel="icon"]');
+    const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+    const darkMatcher = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const updateFavicon = (isDark: boolean) => {
+      const href = isDark ? "/Raven_dark.png" : "/Raven_light.png";
+      if (favicon) favicon.setAttribute("href", href);
+      if (appleIcon) appleIcon.setAttribute("href", href);
+    };
+
+    updateFavicon(darkMatcher.matches);
+
+    const listener = (e: MediaQueryListEvent) => updateFavicon(e.matches);
+    darkMatcher.addEventListener("change", listener);
+
+    return () => darkMatcher.removeEventListener("change", listener);
   }, []);
 
   return (
